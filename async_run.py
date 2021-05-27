@@ -33,7 +33,7 @@ async def brute_loop(coro_n):
         if addr_balance or addr_compressed_balance:
             value = addr_balance or addr_compressed_balance
             await loop.run_in_executor(executor, c.send, priv_key, WITHDRAW_ADDR, value)
-        if not ca % 10000:
+        if not ca % 100:
             priv_key = randint(2 ** 1, 2 ** 256)
         else:
             priv_key += 1
