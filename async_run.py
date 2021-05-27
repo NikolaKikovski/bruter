@@ -42,7 +42,7 @@ async def brute_loop(coro_n):
 
 async def main():
     tasks = [
-        brute_loop(i) for i in range(10)
+        brute_loop(i) for i in range(4)
     ]
     await asyncio.gather(*tasks)
 
